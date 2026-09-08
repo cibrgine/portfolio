@@ -28,35 +28,35 @@ TAG_GRADIENTS = [
 
 PROJECTS = [
     {
-        "id": 1,
-        "title": "PROJECT-NAME 1",
-        "desc": "End-to-end deep learning pipeline for computer vision applications with distributed inference and real-time tracking capabilities across multi-node clusters.",
-        "tech": ["PyTorch", "OpenCV", "Docker", "FastAPI"],
-        "link": "https://github.com",
+        "id": 2,
+        "title": "Auto Predictive Maintenance",
+        "desc": "Conception et conteneurisation d'un pipeline MLOps de maintenance prédictive sous Docker, intégrant le réentraînement continu via GitHub Actions et l'ingestion de données en temps réel.",
+        "tech":  ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow",  "Apache Kafka", "PostgreSQL", "uv" ,"Git"],
+        "link": "/Maintenance",
         "image_path": "assets/project1.jpg"
     },
     {
-        "id": 2,
-        "title": "PROJECT-NAME 2",
-        "desc": "Real-time streaming ETL architecture parsing high-throughput IoT telemetry data into vector indices for similarity queries.",
-        "tech": ["Apache Kafka", "Spark", "PostgreSQL", "Airflow"],
-        "link": "https://github.com",
+        "id": 1,
+        "title": "Worker Safety AI",
+        "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv8, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
+        "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv8)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn / Matplotlib"],
+        "link": "/Maintenance",
         "image_path": "assets/project2.jpg"
     },
     {
         "id": 3,
-        "title": "PROJECT-NAME 3",
-        "desc": "Large language model fine-tuning workflow with automated evaluation benchmarks, quantization, and self-hosted low-latency API.",
-        "tech": ["Transformers", "vLLM", "Ray", "Kubernetes"],
-        "link": "https://github.com",
+        "title": "LEGAL RAG AI",
+        "desc": " Conception et déploiement d'un pipeline RAG hybride (recherche dense et BM25, reranking Cross-Encoder) pour l'analyse de conformité contractuelle, intégrant une suite d'évaluation quantitative de la fidélité et du rappel de contexte (Ragas).",
+        "tech": ["Python", "LangChain / LlamaIndex", "BM25 (Rank-BM25)", "Dense Vector Embeddings",  "Vector Database (FAISS / Qdrant / ChromaDB)", "Cross-Encoder Reranking (Sentence-Transformers)", "Large Language Models (LLMs)", "Ragas (Retrieval Augmented Generation Assessment)", "Hugging Face Transformers"],
+        "link": "/Maintenance",
         "image_path": "assets/project3.jpg"
     },
     {
         "id": 4,
-        "title": "PROJECT-NAME 4",
-        "desc": "Automated feature engineering engine with model explainability dashboards and drift monitoring for production risk assessment.",
-        "tech": ["Scikit-Learn", "LightGBM", "MLflow", "Streamlit"],
-        "link": "https://github.com",
+        "title": "DomainLLM Adapt",
+        "desc": "Fine-tuning supervisé et efficace (QLoRA, PEFT) d'un LLM open-source pour l'extraction structurée de données métier, optimisé par quantification pour inférence à faible empreinte mémoire et servi via une API haute performance.",
+        "tech": [ "Python", "PyTorch",  "Hugging Face Transformers",  "PEFT (Parameter-Efficient Fine-Tuning)", "QLoRA",  "BitsAndBytes", "TRL (Transformer Reinforcement Learning / SFTTrainer)",  "Hugging Face Datasets",  "Accelerate",  "Pydantic",  "Instructor",  "vLLM",    "FastAPI", "Uvicorn",  "Docker"],
+        "link": "/Maintenance",
         "image_path": "assets/project4.jpg"
     },
 ]
