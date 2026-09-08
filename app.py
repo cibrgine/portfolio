@@ -32,7 +32,7 @@ PROJECTS = [
         "title": "Auto Predictive Maintenance",
         "desc": "Conception et conteneurisation d'un pipeline MLOps de maintenance prédictive sous Docker, intégrant le réentraînement continu via GitHub Actions et l'ingestion de données en temps réel.",
         "tech":  ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow",  "Apache Kafka", "PostgreSQL", "uv" ,"Git"],
-        "link": "/Maintenance",
+        "link": "/pages/Maintenance",
         "image_path": "assets/project1.jpg"
     },
     {
@@ -40,7 +40,7 @@ PROJECTS = [
         "title": "Worker Safety AI",
         "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv8, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
         "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv8)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn / Matplotlib"],
-        "link": "/Maintenance",
+        "link": "/pages/Maintenance",
         "image_path": "assets/project2.jpg"
     },
     {
@@ -48,7 +48,7 @@ PROJECTS = [
         "title": "LEGAL RAG AI",
         "desc": " Conception et déploiement d'un pipeline RAG hybride (recherche dense et BM25, reranking Cross-Encoder) pour l'analyse de conformité contractuelle, intégrant une suite d'évaluation quantitative de la fidélité et du rappel de contexte (Ragas).",
         "tech": ["Python", "LangChain / LlamaIndex", "BM25 (Rank-BM25)", "Dense Vector Embeddings",  "Vector Database (FAISS / Qdrant / ChromaDB)", "Cross-Encoder Reranking (Sentence-Transformers)", "Large Language Models (LLMs)", "Ragas (Retrieval Augmented Generation Assessment)", "Hugging Face Transformers"],
-        "link": "/Maintenance",
+        "link": "/pages/Maintenance",
         "image_path": "assets/project3.jpg"
     },
     {
@@ -56,7 +56,7 @@ PROJECTS = [
         "title": "DomainLLM Adapt",
         "desc": "Fine-tuning supervisé et efficace (QLoRA, PEFT) d'un LLM open-source pour l'extraction structurée de données métier, optimisé par quantification pour inférence à faible empreinte mémoire et servi via une API haute performance.",
         "tech": [ "Python", "PyTorch",  "Hugging Face Transformers",  "PEFT (Parameter-Efficient Fine-Tuning)", "QLoRA",  "BitsAndBytes", "TRL (Transformer Reinforcement Learning / SFTTrainer)",  "Hugging Face Datasets",  "Accelerate",  "Pydantic",  "Instructor",  "vLLM",    "FastAPI", "Uvicorn",  "Docker"],
-        "link": "/Maintenance",
+        "link": "/pages/Maintenance",
         "image_path": "assets/project4.jpg"
     },
 ]
