@@ -2,17 +2,16 @@ import streamlit as st
 import base64
 import os
 import random
-import textwrap
 
 st.set_page_config(
     page_title="Amine Lassri's Portfolio",
-    page_icon="",
+    page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
 # -------------------------------------------------------------
-# 1. CONFIGURATION & PLACEHOLDER DATA
+# 1. CONFIGURATION & PROJECTS
 # -------------------------------------------------------------
 CONTACT_EMAIL = "cibrgine@gmail.com"
 
@@ -31,8 +30,8 @@ PROJECTS = [
         "id": 2,
         "title": "Auto Predictive Maintenance",
         "desc": "Conception et conteneurisation d'un pipeline MLOps de maintenance prédictive sous Docker, intégrant le réentraînement continu via GitHub Actions et l'ingestion de données en temps réel.",
-        "tech": ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow",  "Apache Kafka", "PostgreSQL", "uv" ,"Git"],
-        "link": "/pages/Maintenance",
+        "tech": ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow", "Apache Kafka", "PostgreSQL", "uv", "Git"],
+        "link": "/Worker_Safety_AI",
         "image_path": "assets/project1.jpg"
     },
     {
@@ -40,23 +39,23 @@ PROJECTS = [
         "title": "Worker Safety AI",
         "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv11-m, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
         "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv11)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn"],
-        "link": "/Worker_Safety_AI",  # Points to the new page in pages/
+        "link": "/Worker_Safety_AI",  # Relative link to sub-page
         "image_path": "assets/project2.jpg"
     },
     {
         "id": 3,
         "title": "LEGAL RAG AI",
-        "desc": " Conception et déploiement d'un pipeline RAG hybride (recherche dense et BM25, reranking Cross-Encoder) pour l'analyse de conformité contractuelle, intégrant une suite d'évaluation quantitative de la fidélité et du rappel de contexte (Ragas).",
-        "tech": ["Python", "LangChain / LlamaIndex", "BM25 (Rank-BM25)", "Dense Vector Embeddings",  "Vector Database (FAISS / Qdrant / ChromaDB)", "Cross-Encoder Reranking (Sentence-Transformers)", "Large Language Models (LLMs)", "Ragas (Retrieval Augmented Generation Assessment)", "Hugging Face Transformers"],
-        "link": "/pages/Maintenance",
+        "desc": "Conception et déploiement d'un pipeline RAG hybride (recherche dense et BM25, reranking Cross-Encoder) pour l'analyse de conformité contractuelle, intégrant une suite d'évaluation quantitative.",
+        "tech": ["Python", "LangChain / LlamaIndex", "BM25 (Rank-BM25)", "Dense Vector Embeddings", "Vector Database", "Cross-Encoder Reranking", "LLMs", "Ragas", "Transformers"],
+        "link": "/Worker_Safety_AI",
         "image_path": "assets/project3.jpg"
     },
     {
         "id": 4,
         "title": "DomainLLM Adapt",
-        "desc": "Fine-tuning supervisé et efficace (QLoRA, PEFT) d'un LLM open-source pour l'extraction structurée de données métier, optimisé par quantification pour inférence à faible empreinte mémoire et servi via une API haute performance.",
-        "tech": [ "Python", "PyTorch",  "Hugging Face Transformers",  "PEFT (Parameter-Efficient Fine-Tuning)", "QLoRA",  "BitsAndBytes", "TRL (Transformer Reinforcement Learning / SFTTrainer)",  "Hugging Face Datasets",  "Accelerate",  "Pydantic",  "Instructor",  "vLLM",    "FastAPI", "Uvicorn",  "Docker"],
-        "link": "/pages/Maintenance",
+        "desc": "Fine-tuning supervisé et efficace (QLoRA, PEFT) d'un LLM open-source pour l'extraction structurée de données métier, optimisé par quantification pour inférence à faible empreinte mémoire.",
+        "tech": ["Python", "PyTorch", "Transformers", "PEFT", "QLoRA", "BitsAndBytes", "TRL", "Datasets", "Accelerate", "vLLM", "FastAPI", "Docker"],
+        "link": "/Worker_Safety_AI",
         "image_path": "assets/project4.jpg"
     },
 ]
@@ -100,9 +99,7 @@ body {
     font-weight: 800;
     letter-spacing: 1.5px;
 }
-.header-left {
-    color: #f1f1f1;
-}
+.header-left { color: #f1f1f1; }
 .header-right a {
     color: #f1f1f1;
     text-decoration: none;
@@ -130,9 +127,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    .projects-grid { grid-template-columns: 1fr; }
 }
 
 .card-wrapper {
@@ -177,10 +172,7 @@ body {
 
 .card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -191,9 +183,7 @@ body {
     z-index: 2;
 }
 
-.card-wrapper:hover .card-overlay {
-    opacity: 1;
-}
+.card-wrapper:hover .card-overlay { opacity: 1; }
 
 .project-name {
     font-size: 1.35rem;
@@ -233,11 +223,10 @@ body {
 }
 </style>
 """
-
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # -------------------------------------------------------------
-# 3. HTML MARKUP RENDERING (No Indentation)
+# 3. HTML MARKUP RENDERING
 # -------------------------------------------------------------
 header_html = f"""<div class="header-bar">
 <div class="header-left">AI &amp; DATA ENGINEER</div>
@@ -256,7 +245,8 @@ for item in PROJECTS:
         for tech in item["tech"]
     )
 
-    card_str = f"""<a class="card-wrapper" href="{item['link']}" target="_blank">
+    # target="_self" forces the click to open in the current tab
+    card_str = f"""<a class="card-wrapper" href="{item['link']}" target="_self">
 {image_content}
 <div class="card-overlay">
 <div class="project-name">{item['title']}</div>
