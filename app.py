@@ -31,7 +31,7 @@ PROJECTS = [
         "title": "Auto Predictive Maintenance",
         "desc": "Conception et conteneurisation d'un pipeline MLOps de maintenance prédictive sous Docker, intégrant le réentraînement continu via GitHub Actions et l'ingestion de données en temps réel.",
         "tech": ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow", "Apache Kafka", "PostgreSQL", "uv", "Git"],
-        "link": "/Worker_Safety_AI",
+        "link": "/maintnance",
         "image_path": "assets/project1.jpg"
     },
     {
@@ -39,7 +39,7 @@ PROJECTS = [
         "title": "Worker Safety AI",
         "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv11-m, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
         "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv11)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn"],
-        "link": "/Worker_Safety_AI",  # Relative link to sub-page
+        "link": "/Worker_Safety_AI",  
         "image_path": "assets/project2.jpg"
     },
     {
@@ -47,7 +47,7 @@ PROJECTS = [
         "title": "LEGAL RAG AI",
         "desc": "Conception et déploiement d'un pipeline RAG hybride (recherche dense et BM25, reranking Cross-Encoder) pour l'analyse de conformité contractuelle, intégrant une suite d'évaluation quantitative.",
         "tech": ["Python", "LangChain / LlamaIndex", "BM25 (Rank-BM25)", "Dense Vector Embeddings", "Vector Database", "Cross-Encoder Reranking", "LLMs", "Ragas", "Transformers"],
-        "link": "/Worker_Safety_AI",
+        "link": "/maintnance",
         "image_path": "assets/project3.jpg"
     },
     {
@@ -55,7 +55,7 @@ PROJECTS = [
         "title": "DomainLLM Adapt",
         "desc": "Fine-tuning supervisé et efficace (QLoRA, PEFT) d'un LLM open-source pour l'extraction structurée de données métier, optimisé par quantification pour inférence à faible empreinte mémoire.",
         "tech": ["Python", "PyTorch", "Transformers", "PEFT", "QLoRA", "BitsAndBytes", "TRL", "Datasets", "Accelerate", "vLLM", "FastAPI", "Docker"],
-        "link": "/Worker_Safety_AI",
+        "link": "/maintnance",
         "image_path": "assets/project4.jpg"
     },
 ]
@@ -115,8 +115,17 @@ body {
     font-size: 2.2rem;
     font-weight: 900;
     letter-spacing: 2px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.4rem;
     text-transform: uppercase;
+}
+
+.main-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #b0b0b0;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.5px;
 }
 
 .projects-grid {
@@ -232,7 +241,8 @@ header_html = f"""<div class="header-bar">
 <div class="header-left">AI &amp; DATA ENGINEER</div>
 <div class="header-right"><a href="mailto:{CONTACT_EMAIL}">CONTACT ME</a></div>
 </div>
-<div class="main-title">AMINE LASSRI'S PORTFOLIO</div>"""
+<div class="main-title">AMINE LASSRI'S PORTFOLIO</div>
+<div class="main-subtitle">Website may take a few seconds to load</div>"""
 
 st.markdown(header_html, unsafe_allow_html=True)
 

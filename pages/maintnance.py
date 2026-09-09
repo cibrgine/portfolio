@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Project In Maintenance",
+    page_title="Project Not Available",
     page_icon="🚧",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -84,11 +84,7 @@ body {
 """, unsafe_allow_html=True)
 
 maintenance_html = """<div class="maintenance-container">
-<div class="status-badge">Under Development</div>
-<div class="maintenance-title">Project in Maintenance</div>
-<div class="maintenance-text">
-This project is currently being polished or deployed. Please check back later!
-</div>
+<div class="maintenance-title">Project not available come back later</div>
 <a href="/" class="back-button" target="_self">Back to Portfolio</a>
 </div>"""
 
