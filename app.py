@@ -31,7 +31,7 @@ PROJECTS = [
         "id": 2,
         "title": "Auto Predictive Maintenance",
         "desc": "Conception et conteneurisation d'un pipeline MLOps de maintenance prédictive sous Docker, intégrant le réentraînement continu via GitHub Actions et l'ingestion de données en temps réel.",
-        "tech":  ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow",  "Apache Kafka", "PostgreSQL", "uv" ,"Git"],
+        "tech": ["Python", "PyTorch", "Docker", "GitHub Actions", "Apache Airflow",  "Apache Kafka", "PostgreSQL", "uv" ,"Git"],
         "link": "/pages/Maintenance",
         "image_path": "assets/project1.jpg"
     },
