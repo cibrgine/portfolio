@@ -38,9 +38,9 @@ PROJECTS = [
     {
         "id": 1,
         "title": "Worker Safety AI",
-        "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv8, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
-        "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv8)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn / Matplotlib"],
-        "link": "/pages/Maintenance",
+        "desc": "Développement et déploiement d'une solution temps réel de détection d'EPI (YOLOv11-m, OpenCV, Streamlit), optimisant la conformité sécurité avec gestion des classes positives et négatives.",
+        "tech": ["Python", "OpenCV", "Ultralytics YOLO (YOLOv11)", "PyTorch", "NumPy & Pandas", "Streamlit", "Scikit-learn"],
+        "link": "/Worker_Safety_AI",  # Points to the new page in pages/
         "image_path": "assets/project2.jpg"
     },
     {
